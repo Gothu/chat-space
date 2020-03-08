@@ -4,7 +4,7 @@
   &__header {
     background-color: $word-color;
     height: 100px;
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: 1px solid $border-color;
     display: flex;
     justify-content: space-between;
     padding: 0 40px;
@@ -13,12 +13,12 @@
       &__name {
         margin-bottom: 15px;
         font-size: 20px;
-        color: #333333;
+        color: $names-color;
       }
       &__members {
         display: flex;
         font-size: 12px;
-        color: #999999;
+        color: $sub-title__color;
         &--names {
           margin-left: 5px;
         }
@@ -31,15 +31,15 @@
       border: 1px solid;
       padding: 0 20px;
       font-size: 16px;
-      color: #38aef0;
+      color: $btn-color;
     }
     a {
       text-decoration: none;
-      color: #38aef0;
+      color: $btn-color;
     }
   }
   &__contents {
-    background-color: #fafafa;
+    background-color: $contents-box;
     height: calc(100vh - 190px);
     padding: 35px 40px;
     .comments-box {
@@ -50,22 +50,22 @@
         &--name {
           font-size: 16px;
           font-weight: bold;
-          color: #333333;
+          color: $names-color;
         }
         &--time {
           font-size: 12px;
-          color: #999999;
+          color: $sub-title__color;
           margin-left: 5px;
         }
       }
       &__text {
         font-size: 14px;
-        color: #434a54;
+        color: $comments-color;
       }
     }
   }
   &__form {
-    background-color: #d2d2d2;
+    background-color: $form;
     height: 90px;
     padding: 20px 40px;
     .input-box {
@@ -93,8 +93,8 @@
       .send-btn {
         height: 50px;
         width: 100px;
-        background-color: #38aef0;
-        color: white;
+        background-color: $btn-color;
+        color: $send-btn__word;
         cursor: pointer;
         margin-left: 15px;
       }
