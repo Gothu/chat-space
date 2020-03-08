@@ -1,0 +1,59 @@
+.side-bar {
+  height: 100vh;
+  width: 300px;
+  &__box {
+    background-color: $users-box;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    .users-box {
+      height: 20px;
+      width: 260px;
+      margin: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      &__names {
+        height: 20px;
+        line-height: 20px;
+        color: $word-color;
+        font-weight: bold;
+        font-size: 16px;
+      }
+      &__icons {
+        height: 20px;
+        width: 60px;
+        display: flex;
+        justify-content: flex-end;
+        text-decoration: none;
+        line-height: 20px;
+        &__btn-new {
+          margin-right: 5px;
+        }
+      a {
+        color: $word-color;
+      }
+      }
+    }
+  }
+  &__groups {
+    background-color: $groups-box;
+    height: calc(100vh - 100px);
+    padding: 20px 20px;
+    .groups-box {
+      margin-bottom: 40px;
+      font-weight: bold;
+      &__name {
+        margin-bottom: 5px;
+        font-size: 15px;
+        color: $word-color;
+      }
+      &__message {
+        font-size: 11px;
+      }
+    }
+    a {
+      text-decoration: none;
+      color: $word-color;
+    }
+  }
+}

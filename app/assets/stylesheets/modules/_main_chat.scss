@@ -1,0 +1,103 @@
+.main-chat {
+  height: 100vh;
+  width: calc(100% - 300px);
+  &__header {
+    background-color: $word-color;
+    height: 100px;
+    border-bottom: 1px solid $border-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 40px;
+    .group-list {
+      margin-top: 35px;
+      &__name {
+        margin-bottom: 15px;
+        font-size: 20px;
+        color: $names-color;
+      }
+      &__members {
+        display: flex;
+        font-size: 12px;
+        color: $sub-title__color;
+        &--names {
+          margin-left: 5px;
+        }
+      }
+    }
+    .edit-group {
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      border: 1px solid;
+      padding: 0 20px;
+      font-size: 16px;
+      color: $btn-color;
+    }
+    a {
+      text-decoration: none;
+      color: $btn-color;
+    }
+  }
+  &__contents {
+    background-color: $contents-box;
+    height: calc(100vh - 190px);
+    padding: 35px 40px;
+    .comments-box {
+      margin-bottom: 46px;
+      &__users {
+        display: flex;
+        margin-bottom: 12px;
+        &--name {
+          font-size: 16px;
+          font-weight: bold;
+          color: $names-color;
+        }
+        &--time {
+          font-size: 12px;
+          color: $sub-title__color;
+          margin-left: 5px;
+        }
+      }
+      &__text {
+        font-size: 14px;
+        color: $comments-color;
+      }
+    }
+  }
+  &__form {
+    background-color: $form;
+    height: 90px;
+    padding: 20px 40px;
+    .input-box {
+      display: flex;
+      .write-box {
+        width: 100%;
+        display: flex;
+        position: relative;
+        &__text {
+          height: 50px;
+          width: 100%;
+          padding: 0 10px;
+        }
+        &__image {
+          cursor: pointer;
+          position: absolute;
+          right: 10px;
+          line-height: 50px;
+          font-size: 25px;
+          &__file {
+            display: none;
+          }
+        }
+      }
+      .send-btn {
+        height: 50px;
+        width: 100px;
+        background-color: $btn-color;
+        color: $send-btn__word;
+        cursor: pointer;
+        margin-left: 15px;
+      }
+    }
+  }
+}
