@@ -3,13 +3,13 @@
   .side-bar__box
     .users-box
       %p.users-box__names
-        TEST
+        = current_user.name
       %ul.users-box__icons
         %li.users-box__icons__btn-new
           = link_to "#" do
             = icon('far','edit')
         %li.users-box__icons__btn-edit
-          = link_to "#" do
+          = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
   .side-bar__groups
     .groups-box
