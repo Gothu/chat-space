@@ -3,29 +3,25 @@
   .main-chat__header
     .group-list
       %h2.group-list__name
-        test
+        = @group.name
       %ul.group-list__members
         Member : 
-        %li.group-list__members--names
-          test
+        - @group.users.each do |user|
+          %li.group-list__members--names
+            = user.name
+
     .edit-group
-      = link_to "#" do
+      = link_to edit_group_path(@group) do
         Edit
 
   .main-chat__contents
-    .comments-box
-      .comments-box__users
-        .comments-box__users--name
-          test
-        .comments-box__users--time
-          2020/03/06(Fri) 17:00:00
-      .comments-box__text
-        テストです
+    = render @messages
   .main-chat__form
-    %from.input-box
-      .write-box
-        %input{type: "text", placeholder: "type a message", class: "write-box__text"}
-        %label{class: "write-box__image"}
-          = icon('far', 'image')
-          %input{type: "file", class: "write-box__image__file"}
-      %input{type: "submit", value: "Send", class: "send-btn"}
+    = form_for [@group, @message] do |f|
+      .input-box
+        .write-box
+          = f.text_field :content, class: 'write-box__text', placeholder: 'type a message'
+          = f.label :image, class: 'write-box__image' do
+            = icon('far', 'image')
+            = f.file_field :image, class: 'write-box__image__file'
+        = f.submit 'Send', class: 'send-btn'
