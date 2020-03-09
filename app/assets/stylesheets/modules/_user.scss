@@ -98,8 +98,8 @@
   }
 
   .field-input {
-    .field_with_errors {
-      position: relative;
+    // .field_with_errors {
+    //   position: relative;
 
       &:after {
         content: '';
@@ -113,7 +113,7 @@
       }
     }
   }
-}
+// }
 
 #error_explanation {
   margin: 20px 0;

@@ -42,6 +42,7 @@
     background-color: $contents-box;
     height: calc(100vh - 190px);
     padding: 35px 40px;
+    overflow: scroll;
     .comments-box {
       margin-bottom: 46px;
       &__users {
@@ -72,7 +73,6 @@
       display: flex;
       .write-box {
         width: 100%;
-        display: flex;
         position: relative;
         &__text {
           height: 50px;
@@ -83,7 +83,7 @@
           cursor: pointer;
           position: absolute;
           right: 10px;
-          line-height: 50px;
+          top: 7px;
           font-size: 25px;
           &__file {
             display: none;
