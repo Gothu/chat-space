@@ -6,16 +6,16 @@
         = current_user.name
       %ul.users-box__icons
         %li.users-box__icons__btn-new
-          = link_to "#" do
+          = link_to new_group_path do
             = icon('far','edit')
         %li.users-box__icons__btn-edit
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog')
   .side-bar__groups
-    .groups-box
-      .groups-box__name
-        = link_to "#" do
-          test
-      .groups-box__message
-        = link_to "#" do
-          まだメッセージはありません
+    - current_user.groups.each do |group|
+      .groups-box
+        = link_to '#' do
+          .groups-box__name
+            = group.name
+          .groups-box__message
+            まだメッセージはありません
