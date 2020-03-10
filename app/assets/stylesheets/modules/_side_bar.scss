@@ -39,6 +39,7 @@
     background-color: $groups-box;
     height: calc(100vh - 100px);
     padding: 20px 20px;
+    overflow: scroll;
     .groups-box {
       margin-bottom: 40px;
       font-weight: bold;
